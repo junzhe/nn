@@ -22,13 +22,13 @@ function [nn, L]  = nn_train(nn, train_x, train_y, opts, val_x, val_y)
         		nn = nn_backpropagation(nn);
         		nn = nn_updategrad(nn);
         
-        		L(n) = nn.L;
-        
         		n = n + 1;
     		end
     
 
-    		nn.learningRate = nn.learningRate * nn.scaling_learningRate;
+    		nn.learningrate = nn.learningrate * nn.scaling_learningrate;
+            
+            i
 	end
 end
 

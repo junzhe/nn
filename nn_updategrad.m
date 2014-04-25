@@ -1,5 +1,5 @@
 function nn = nn_updategrad(nn)
-	for i = 1 : nn.levels
+	for i = 1 : nn.levels - 1
 		dW = nn.dW{i};
 
 		dW = nn.learningrate * nn.dW{i};
@@ -9,6 +9,6 @@ function nn = nn_updategrad(nn)
             		dW = nn.vW{i};
         	end
 
-		nn.W{i} = nn.W{i} - dW;i
+		nn.W{i} = nn.W{i} - dW;
 	end
 end
